@@ -14,3 +14,15 @@ it("should validate a password", () => {
     expect(userService.validatePassword(badUser.password)).toBe(false)
 })
 
+it("should validate a password with a min size", () => {
+    const passwordCorrect = "12345678"
+    const passwordIncorrect = "123"
+
+    const userService = new UserService()
+
+    const goodUser = new User({ name: "Isaque", password: passwordCorrect })
+    const badUser = new User({ name: "Euqasi", password: passwordIncorrect })
+
+    expect(userService.validatePassMinSize(passwordCorrect)).toBe(true)
+})
+
