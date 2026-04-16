@@ -18,7 +18,8 @@ class UserService {
     }
 
     validatePassSpeciaChar(password) {
-        return true
+        const specialCharRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?`~]/
+        return specialCharRegex.test(password)
     }
 }
 
