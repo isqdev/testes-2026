@@ -1,0 +1,4 @@
+{
+  "jest.rootPath": "javascript",
+  "jest.jestCommandLine": "npm test --"
+}

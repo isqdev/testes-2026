@@ -1,0 +1,18 @@
+[
+    {
+        "descricao": "CT-01 - Usuário e livro válidos",
+        "ativo": true, 
+        "emprestimosAtivos": 0,
+        "multaPendente": 0,
+        "livroDisponivel": true,
+        "saida": true
+    },
+    {
+        "descricao": "CT-02 - Usuário(STATUS) invalido e livro válidos",
+        "ativo": false,
+        "emprestimosAtivos": 0,
+        "multaPendente": 0,
+        "livroDisponivel": true,
+        "saida": false
+    }
+]
