@@ -26,3 +26,14 @@ it("should validate a password with a min size", () => {
     expect(userService.validatePassMinSize(passwordCorrect)).toBe(true)
 })
 
+it("should validate a password with at least 1 capital letter", () => {
+    const passwordCorrect = "1234567A"
+    const passwordIncorrect = "123"
+
+    const userService = new UserService()
+
+    const goodUser = new User({ name: "Isaque", password: passwordCorrect })
+    const badUser = new User({ name: "Euqasi", password: passwordIncorrect })
+
+    expect(userService.validatePassCapitalLetter(passwordCorrect)).toBe(true)
+})
