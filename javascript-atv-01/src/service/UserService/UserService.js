@@ -16,6 +16,10 @@ class UserService {
         const numberRegex = /\d/
         return numberRegex.test(password)
     }
+
+    validatePassSpeciaChar(password) {
+        return true
+    }
 }
 
 module.exports = UserService
