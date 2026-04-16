@@ -1,9 +1,7 @@
 class UserService {
     validatePassword(password) {
-
-        if (password) {
-            return true;
-        }
+        const passRegex = /^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?`~])[^\s]{8,}$/;
+        return passRegex.test(password)
     }
 }
 

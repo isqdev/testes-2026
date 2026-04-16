@@ -11,6 +11,6 @@ it("should validate a password", () => {
     const badUser = new User({ name: "Euqasi", password: passwordIncorrect })
 
     expect(userService.validatePassword(goodUser.password)).toBe(true)
-    // expect(userService.validatePassword(badUser.password)).toBe(false)
+    expect(userService.validatePassword(badUser.password)).toBe(false)
 })
 
