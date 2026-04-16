@@ -9,7 +9,8 @@ class UserService {
     }
 
     validatePassCapitalLetter(password) {
-        return true
+        const capitalLetterRegex = /[A-Z]/
+        return capitalLetterRegex.test(password)
     }
 }
 
