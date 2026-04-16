@@ -78,3 +78,10 @@ class UserService {
 
 module.exports = UserService
 ```
+
+### Reflexão
+O TDD é uma abordagem bem interessante, e uma estratégia para assegurar o funcionamento contínuo do código uma vez que as implementações dependem diretamente da execução dos testes. 
+
+Isso permite identificar rapidamente o que e quando refactors ou feats quebram o código, resultando em erros. Creio que a maior vantagem dessa metodologia seja justamente a rastreabilidade de erros durante o processo de desenvolvimento, porque quanto mais cedo o erro é percebido, mais rápido, fácil e barato é a correção.  
+
+> Testes são uma estratégia de bons processos, e bons processos tendem a produzir produtos de qualidade.
