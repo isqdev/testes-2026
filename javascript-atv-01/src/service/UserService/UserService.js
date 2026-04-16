@@ -13,7 +13,8 @@ class UserService {
         return capitalLetterRegex.test(password)
     }
     validatePassNumber(password) {
-        return true
+        const numberRegex = /\d/
+        return numberRegex.test(password)
     }
 }
 
