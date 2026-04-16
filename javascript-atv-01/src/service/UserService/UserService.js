@@ -23,7 +23,8 @@ class UserService {
     }
 
     validatePassWhiteSpace(password) {
-        return true
+        const whiteSpaceRegex = /\s/
+        return !whiteSpaceRegex.test(password)
     }
 }
 
