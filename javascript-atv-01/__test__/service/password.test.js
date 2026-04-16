@@ -33,4 +33,13 @@ it("should validate a password with at least 1 capital letter", () => {
     expect(userService.validatePassCapitalLetter(pass)).toBe(true)
 })
 
+it("should validate a password with at least 1 number", () => {
+    const pass = "1234567A"
+
+    const userService = new UserService()
+    const goodUser = new User({ name: "Isaque", password: pass })
+
+    expect(userService.validatePassNumber(pass)).toBe(true)
+})
+
 
