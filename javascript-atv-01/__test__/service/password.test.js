@@ -21,7 +21,7 @@ it("should validate a password with a min size", () => {
 
     const goodUser = new User({ name: "Isaque", password: pass })
 
-    expect(userService.validatePassMinSize(pass)).toBe(true)
+    expect(userService.validatePassMinSize(goodUser.password)).toBe(true)
 })
 
 it("should validate a password with at least 1 capital letter", () => {
@@ -30,7 +30,7 @@ it("should validate a password with at least 1 capital letter", () => {
     const userService = new UserService()
     const goodUser = new User({ name: "Isaque", password: pass })
 
-    expect(userService.validatePassCapitalLetter(pass)).toBe(true)
+    expect(userService.validatePassCapitalLetter(goodUser.password)).toBe(true)
 })
 
 it("should validate a password with at least 1 number", () => {
@@ -39,7 +39,18 @@ it("should validate a password with at least 1 number", () => {
     const userService = new UserService()
     const goodUser = new User({ name: "Isaque", password: pass })
 
-    expect(userService.validatePassNumber(pass)).toBe(true)
+    expect(userService.validatePassNumber(goodUser.password)).toBe(true)
 })
+
+it("should validate a password with at least 1 special character", () => {
+    const pass = "1234567@"
+
+    const userService = new UserService()
+    const goodUser = new User({ name: "Isaque", password: pass })
+
+    expect(userService.validatePassSpeciaChar(goodUser.password)).toBe(true)
+})
+
+
 
 
