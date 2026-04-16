@@ -7,6 +7,10 @@ class UserService {
     validatePassMinSize(password) {
         return password.length >= 8
     }
+
+    validatePassCapitalLetter(password) {
+        return true
+    }
 }
 
 module.exports = UserService
