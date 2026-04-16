@@ -5,7 +5,7 @@ class UserService {
     }
 
     validatePassMinSize(password) {
-        return true
+        return password.length >= 8
     }
 }
 
