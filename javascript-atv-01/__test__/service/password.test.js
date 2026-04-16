@@ -51,6 +51,14 @@ it("should validate a password with at least 1 special character", () => {
     expect(userService.validatePassSpeciaChar(goodUser.password)).toBe(true)
 })
 
+it("should validate no white space in password", () => {
+    const pass = "1234567@"
+
+    const userService = new UserService()
+    const goodUser = new User({ name: "Isaque", password: pass })
+
+    expect(userService.validatePassWhiteSpace(goodUser.password)).toBe(true)
+})
 
 
 
