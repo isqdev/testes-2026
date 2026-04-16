@@ -12,6 +12,9 @@ class UserService {
         const capitalLetterRegex = /[A-Z]/
         return capitalLetterRegex.test(password)
     }
+    validatePassNumber(password) {
+        return true
+    }
 }
 
 module.exports = UserService
