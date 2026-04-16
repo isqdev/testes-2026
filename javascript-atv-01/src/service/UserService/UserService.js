@@ -21,6 +21,10 @@ class UserService {
         const specialCharRegex = /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?`~]/
         return specialCharRegex.test(password)
     }
+
+    validatePassWhiteSpace(password) {
+        return true
+    }
 }
 
 module.exports = UserService
